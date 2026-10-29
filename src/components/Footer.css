@@ -1,0 +1,142 @@
+.site-footer {
+  padding: 55px 0 22px;
+  background: #101b46;
+  color: #fff;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 24px 50px;
+  padding-bottom: 38px;
+}
+
+.footer-brand {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 11px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Match the navbar logo */
+.footer-brand .brand-mark {
+  flex-shrink: 0;
+}
+
+.footer-brand .brand-name {
+  color: #fff;
+}
+
+.footer-brand .brand-name strong {
+  color: #b8c6ff;
+}
+
+.footer-description {
+  grid-column: 1;
+  max-width: 430px;
+  margin: -6px 0 0;
+  color: #c1c9e4;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.footer-links {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 16px 24px;
+  padding-top: 10px;
+}
+
+.footer-links a,
+.footer-back-top {
+  color: #dce3ff;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover,
+.footer-back-top:hover {
+  color: #fff;
+}
+
+.footer-links a:focus-visible,
+.footer-back-top:focus-visible,
+.footer-brand:focus-visible {
+  outline: 2px solid #b8c6ff;
+  outline-offset: 5px;
+  border-radius: 3px;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #aeb9db;
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
+
+.footer-back-top {
+  flex-shrink: 0;
+}
+
+@media (max-width: 760px) {
+  .site-footer {
+    padding-top: 42px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-bottom: 28px;
+  }
+
+  .footer-description {
+    grid-column: auto;
+    margin: 0;
+  }
+
+  .footer-links {
+    grid-column: auto;
+    grid-row: auto;
+    justify-content: flex-start;
+    gap: 16px 20px;
+    padding-top: 4px;
+  }
+
+  .footer-bottom {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer-links {
+    gap: 14px 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-links a,
+  .footer-back-top {
+    transition: none;
+  }
+}

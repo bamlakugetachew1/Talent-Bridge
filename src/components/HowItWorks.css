@@ -1,0 +1,133 @@
+.how-section {
+  padding: 90px 0;
+  background: #f8f9ff;
+}
+
+.how-heading {
+  max-width: 680px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.how-heading .eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: var(--blue);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.how-heading h2 {
+  margin: 0 0 16px;
+  color: var(--navy);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+}
+
+.how-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.how-step {
+  position: relative;
+  padding: 32px 28px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.how-step:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.how-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 24px;
+  border-radius: 16px;
+  background: var(--soft-blue);
+  color: var(--blue);
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.how-step:nth-child(2) .how-number {
+  background: var(--soft-purple);
+  color: var(--purple);
+}
+
+.how-step:nth-child(3) .how-number {
+  background: #e7f8f0;
+  color: #138b67;
+}
+
+.how-step h3 {
+  margin: 0 0 12px;
+  color: var(--navy);
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.how-step p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 900px) {
+  .how-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .how-step {
+    padding: 28px;
+  }
+
+  .how-number {
+    margin-bottom: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .how-section {
+    padding: 60px 0;
+  }
+
+  .how-heading {
+    margin-bottom: 32px;
+  }
+
+  .how-step {
+    padding: 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .how-step {
+    transition: none;
+  }
+
+  .how-step:hover {
+    transform: none;
+  }
+}

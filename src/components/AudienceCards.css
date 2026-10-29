@@ -1,0 +1,187 @@
+
+.audience-section {
+  padding: 90px 0;
+  background: #fff;
+}
+
+.audience-heading {
+  max-width: 680px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.audience-heading .eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: var(--blue);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.audience-heading h2 {
+  margin: 0 0 16px;
+  color: var(--navy);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+}
+
+.audience-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.audience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px;
+}
+
+.audience-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 330px;
+  padding: 36px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.audience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.employer-card {
+  background: linear-gradient(145deg, #f0f4ff 0%, #fff 85%);
+}
+
+.talent-card {
+  background: linear-gradient(145deg, #f5efff 0%, #fff 85%);
+}
+
+.audience-card-icon {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  margin-bottom: 25px;
+  place-items: center;
+  border-radius: 17px;
+  background: #fff;
+  color: var(--blue);
+  box-shadow: 0 6px 22px rgba(30, 49, 112, 0.08);
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.talent-card .audience-card-icon {
+  color: var(--purple);
+}
+
+.audience-label {
+  margin-bottom: 12px;
+  color: var(--blue);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.talent-card .audience-label {
+  color: var(--purple);
+}
+
+.audience-card h3 {
+  max-width: 390px;
+  margin: 0 0 14px;
+  color: var(--navy);
+  font-size: clamp(1.45rem, 2.5vw, 1.85rem);
+  line-height: 1.3;
+  letter-spacing: -0.025em;
+}
+
+.audience-card p {
+  max-width: 410px;
+  margin: 0 0 25px;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.8;
+}
+
+.audience-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  color: var(--blue);
+  font-size: 0.92rem;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.talent-card .audience-link {
+  color: var(--purple);
+}
+
+.audience-link span {
+  transition: transform 0.2s ease;
+}
+
+.audience-link:hover span {
+  transform: translateX(4px);
+}
+
+.audience-link:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 5px;
+  border-radius: 3px;
+}
+
+@media (max-width: 760px) {
+  .audience-section {
+    padding: 65px 0;
+  }
+
+  .audience-heading {
+    margin-bottom: 30px;
+  }
+
+  .audience-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .audience-card {
+    min-height: 300px;
+    padding: 28px;
+  }
+}
+
+@media (max-width: 420px) {
+  .audience-section {
+    padding: 50px 0;
+  }
+
+  .audience-card {
+    min-height: auto;
+    padding: 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .audience-card,
+  .audience-link span {
+    transition: none;
+  }
+
+  .audience-card:hover {
+    transform: none;
+  }
+}
